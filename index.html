@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ScenarioTrades — Custom Rule-Based Alert Engine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ScenarioTrades is a custom rule-based alert engine. Define your logic and get notified when market conditions are met.">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f7f7f7; color: #222; }
+    header { background: #0d1117; color: white; padding: 60px 20px; text-align: center; }
+    h1 { margin-bottom: 10px; }
+    h2 { margin-top: 40px; }
+    section { max-width: 900px; margin: auto; padding: 20px; }
+    .card { background: white; padding: 20px; border-radius: 8px; margin: 20px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    footer { text-align: center; padding: 30px; font-size: 14px; color: #555; }
+    code { background: #eee; padding: 4px 6px; border-radius: 4px; display: block; margin: 10px 0; white-space: pre-line; }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <!-- Minimal Octopus Logo (No Legs, No Eyes) -->
+  <svg width="120" height="120" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:20px;" role="img" aria-label="ScenarioTrades logo">
+    <circle cx="100" cy="80" r="55" fill="white" opacity="0.9"/>
+    <rect x="70" y="110" width="60" height="12" rx="6" fill="white" opacity="0.9"/>
+  </svg>
+
+  <h1>ScenarioTrades</h1>
+  <p>A custom rule‑based alert engine. Define your logic — ScenarioTrades runs it and notifies you when conditions are met.</p>
+</header>
+
+<section>
+
+  <div class="card">
+    <h2>What is ScenarioTrades?</h2>
+    <p>ScenarioTrades is a modular alert engine that evaluates user‑defined rules against market data and sends alerts when conditions are met. It does not provide trading advice, does not recommend trades, and does not execute trades. It simply runs the logic you define.</p>
+  </div>
+
+  <div class="card">
+    <h2>How It Works</h2>
+    <ul>
+      <li>You define a rule using your own logic.</li>
+      <li>ScenarioTrades continuously runs that rule logic.</li>
+      <li>When your conditions are met, an alert is sent.</li>
+      <li>No optimization, no interpretation — your logic, your conditions.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Supported Modules</h2>
+    <p>Rules can reference any combination of:</p>
+    <ul>
+      <li>Price</li>
+      <li>Volume</li>
+      <li>Options flow</li>
+      <li>Sentiment</li>
+      <li>Markov state transitions</li>
+      <li>Custom data sources (user‑provided)</li>
+    </ul>
+    <p>Modules are optional — you choose what your rule uses.</p>
+  </div>
+
+  <div class="card">
+    <h2>Rule Logic Examples</h2>
+
+    <h3>Price + Volume Example</h3>
+    <code>
+IF price crosses above 20‑day SMA  
+AND volume > 2× average  
+THEN send alert
+    </code>
+
+    <h3>Sentiment + Flow Example</h3>
+    <code>
+IF sentiment flips from negative → positive  
+AND call‑volume > put‑volume  
+THEN send alert
+    </code>
+
+    <h3>Markov Chain Example (Non‑Predictive)</h3>
+    <code>
+IF Markov state transitions from S2 → S3  
+THEN send alert
+    </code>
+
+    <p>These examples demonstrate logic only — not performance, predictions, or trading outcomes.</p>
+  </div>
+
+  <div class="card">
+    <h2>What ScenarioTrades Does Not Do</h2>
+    <ul>
+      <li>Does not recommend trades</li>
+      <li>Does not optimize rules</li>
+      <li>Does not provide performance claims</li>
+      <li>Does not execute trades</li>
+      <li>Does not manage money</li>
+    </ul>
+  </div>
+
+</section>
+
+<footer>
+  © ScenarioTrades — Custom Rule Logic Alert Engine
+</footer>
+
+</body>
+</html>
